@@ -2,7 +2,7 @@ name: Run Cron
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   schedule:
     - cron: "0 8,14,20 * * *"
   workflow_dispatch:
@@ -35,8 +35,8 @@ jobs:
       # Commit all changed files to the repository
       - name: Commit to the repo
         run: |
-          git config --global user.name "Kurt-Leopard/cron_job"
-          git config --global user.email "markangeloujamandre@gmail.com"
+          git config --global user.name "retsu14/cron_job"
+          git config --global user.email "tajanlangitelieser19@gmail.com"
           git add .
           # Force the build to succeed, even if no files were changed
           git commit -m 'Update generated files' || true
